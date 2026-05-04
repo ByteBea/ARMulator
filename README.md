@@ -1,4 +1,4 @@
-# ARMulator
+# ARMulator Unicorn
 
 ## Project Description
 
