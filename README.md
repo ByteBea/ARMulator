@@ -8,10 +8,11 @@ ARMmulator is a lightweight ARMv7 emulator tool based on Unicorn Engine framewor
 ## 2. Requirements & Installation   
 
 ### Prerequisites
-- Python 3.x
-- Unicorn Engine: `pip install unicorn`
-- `unicorn`
-
+- Python 3.13.xx
+- Create `venv`
+- `pip install --upgrade pip`
+- Install `requirements.txt`
+  
 ## 3. User Guide
 Run the emulator by passing an assembly file as an argument (**at the moment**):
 
