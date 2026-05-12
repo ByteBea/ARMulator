@@ -3,7 +3,7 @@
 
 ## 1. ARMulator: ARM Architecture Emulator   
 
-ARMulator is a lightweight ARMv7 emulator tool based on Unicorn Engine framework.It fills the gap between assembly source code and hardware-level execution by integrating a custom assembler, memory management, and state history tracking. 
+ARMmulator is a lightweight ARMv7 emulator tool based on Unicorn Engine framework.It fills the gap between assembly source code and hardware-level execution by integrating a custom assembler, memory management, and state history tracking. 
 
 ## 2. Requirements & Installation   
 
