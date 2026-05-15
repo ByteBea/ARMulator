@@ -57,7 +57,7 @@ class UnicornEmulator:
         self.DATA_ADDR   = self.bytecode["__MEMINFOSTART"]["DATA"]
         #creazione dell'istanza di Unicorn per ARM in modalità ARM (non Thumb), mappatura della memoria, e scrittura dei dati di INTVEC, CODE e DATA nei rispettivi indirizzi di memoria. Questo permette a Unicorn di eseguire il codice e gestire gli interrupt correttamente durante la simulazione.
         self.mu.mem_map(0x0, 0x10000)
-        #HOk unicorn per brekpoint 
+        #HOok unicorn per brekpoint 
         self.mu.hook_add(UC_HOOK_CODE, self.hook_code)#hook per i breakpoint, che ferma l'esecuzione quando si raggiunge un indirizzo di breakpoint, o quando si accede in lettura/scrittura a un indirizzo di breakpoint, a seconda del tipo di breakpoint impostato. Questo permette di eseguire il debug del codice e analizzare il comportamento del programma durante la simulazione.
         self.mu.hook_add(UC_HOOK_MEM_READ | UC_HOOK_MEM_WRITE, self.hook_mem)#  hook per i breakpoint di memoria, che ferma l'esecuzione quando si accede in lettura/scrittura a un indirizzo di breakpoint, a seconda del tipo di breakpoint impostato. Questo permette di eseguire il debug del codice e analizzare il comportamento del programma durante la simulazione.
         self.mu.mem_write(self.INTVEC_ADDR, bytes(self.mem.data["INTVEC"]))
