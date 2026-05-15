@@ -3,7 +3,7 @@
 
 ## 1. Introduction 
 
-ARMmulator is a lightweight ARMv7 emulator tool built on top of [Unicorn Engine](https://www.unicorn-engine.org/).It bridges the gap between assembly source code and hardware-level execution by integrating a custom assembler, memory management, and state history tracking.
+ARMmulator is a lightweight ARM emulator tool built on top of [Unicorn Engine](https://www.unicorn-engine.org/).It bridges the gap between assembly source code and hardware-level execution by integrating a custom assembler, memory management, and state history tracking.
 
 ### 1.1 About the project
 Unicorn took QEMU's CPU emulation core and turned it into an embeddable library which can be controlled by API, by removing the bootloader, device emulation, OS, and anything else. It achieves high performance through the Just-In-Time (JIT) compiler technique. This means that ARM Bytecode is not interpreted instruction by instruction (as `simulator.py` from the original project did), but it is compiled at runtime into native code of the host machine.
@@ -14,7 +14,7 @@ The old version of ARMulator (based on epater) used a pure python interpreter: e
 
 ### 1.2 Supported Architectures
 Unicorn generally supports ARM, ARM64 (ARMv8), m68k, MIPS, PowerPC, RISC-V, S390x (SystemZ), SPARC, TriCore and x86 (including x86_64). 
-In fact the previous project was stuck on ARMv4, but with Unicorn it now supports ARMv7.
+In fact the previous project was stuck on ARMv4, but with Unicorn now it could support ARMv7.
 
 ### 1.3 Main Changes
 - Updated dependencies in the `requirements.txt`.
@@ -246,7 +246,7 @@ N --> O[UI / Output Visualization]
 7. Fix shallow copy bug in Memory.initdata to ensure correct state restoration on reset.
 8. Translate `manuale.pdf` or produce a new one.
 9. Create a standalone executable (.exe / binary) using PyInstaller to simplify distribution and avoid manual dependency installation.
-
+10. Extend assembler to support ARMv7 (or ARMv8) instruction set and enable UC_MODE_V7 (or UC_MODE_V8) in Unicorn initialization.
 
 ## 7. License and Acknowledgements
 This project was developed as a final assignment for the [Computer Science](http://www.informatica.uniroma2.it) degree program at the University of Rome Tor Vergata.
